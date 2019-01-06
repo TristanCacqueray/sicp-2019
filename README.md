@@ -47,7 +47,9 @@ This is a weekly schedule adapted from this [meetup](https://github.com/CompSciC
 
 [lecture](https://archive.org/download/MIT_Structure_of_Computer_Programs_1986/lec1a.mp4)
 
-For exercice 1.3, name the function square-sum-larger
+-   For exercice 1.3, name the function square-sum-larger.
+-   For exercise 1.7, name the function sqrt
+-   For exercise 1.8, name the function cube-root
 
 
 ### 1.2 (Procedures and the Processes Who Love Them)

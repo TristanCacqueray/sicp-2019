@@ -1,0 +1,23 @@
+- job:
+    name: sicp-evaluate
+    description: Evaluate SICP assignment
+    voting: false
+    run: playbooks/evaluate.yaml
+    nodeset: fedora-latest-runc
+    files:
+      - assignments/*
+
+- job:
+    name: sicp-evaluate-test
+    description: Verify SICP evaluate script
+    run: playbooks/evaluate-test.yaml
+    nodeset: fedora-latest-runc
+    files:
+      - evaluate/*
+
+- project:
+    check:
+      - sicp-evaluate
+      - sicp-evaluate-test
+    gate:
+      - noop
