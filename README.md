@@ -158,6 +158,24 @@ To use the picture language, you can use DrRacket and load this [library](https:
 
 [lecture 4b (second half)](https://archive.org/download/MIT_Structure_of_Computer_Programs_1986/lec4b.mp4)
 
+To run the code, use this put/get implementation:
+
+```scheme
+(define *op-table* (make-hash-table))
+
+(define (put op type proc)
+  (hash-table/put! *op-table* (list op type) proc))
+
+(define (get op type)
+  (hash-table/get *op-table* (list op type) '()))
+
+(define (put-coercion source-type target-type proc)
+  (put 'coercion (list source-type target-type) proc))
+
+(define (get-coercion source-type target-type)
+  (get 'coercion (list source-type target-type)))
+```
+
 
 ### 2.5.3 (Symbolic Algebra)
 
